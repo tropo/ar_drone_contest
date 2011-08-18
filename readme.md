@@ -1,4 +1,4 @@
-AR Drone Contest
+Win an AR Drone!!
 ==================
 
 ![AR Drone](http://assets.gearlive.com/blogimages/parros-ar_drone-copter.jpg)
@@ -15,12 +15,12 @@ Rules
 * Please make sure to include in your readme file contact information and instructions on how to demo the application
 
 
-Submissions
+How to enter
 --------
-* Fork this repo
-  * git clone 
-* Create branch w/ your email address
+1. Fork this repo
+  * git clone git://github.com/tropo/ar_drone_contest.git
+2. Create branch w/ your email address
   *  git checkout -b john@tropo.com
-* Add you application and commit
-  * Submit pull request
-  
+3. Add you application and commit
+  * Submit pull request to tropo
+4. World domination
