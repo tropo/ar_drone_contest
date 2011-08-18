@@ -21,6 +21,10 @@ How to enter
   * git clone git://github.com/tropo/ar_drone_contest.git
 2. Create branch w/ your email address
   *  git checkout -b john@tropo.com
-3. Add you application and commit
-  * Submit pull request to tropo
-4. World domination
+3. Create a folder with your namespace
+  * mkdir my_app
+4. Commit and push back to Github
+  * git add .
+  * git commit -am "Here is my awesome application!!"
+5. Log into Github and submit a pull request
+6. Achieve world domination
