@@ -1,0 +1,37 @@
+article, header, hgroup
+  display: block
+
+html, body
+  background: url(/images/bg.png) $light-gray
+  color: $dark-gray
+
+.container
+  +container
+  margin-top: 20px
+  margin-bottom: 20px
+  padding: 1em
+  text-align: center
+
+header
+  margin-bottom: 2.5em
+  
+  img
+    margin-bottom: 25px
+  
+  hgroup  
+    h1
+      font-size: 3em
+      font-weight: bold
+      margin-bottom: 0.25em
+    h2
+      font-size: 1.5em
+      
+#content
+  a#number
+    +rounded
+    display: block
+    font-size: 5em
+    text-decoration: none
+    border: 3px $dark-gray solid
+    background: $white
+    padding: 0.25em

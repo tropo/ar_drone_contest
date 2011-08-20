@@ -1,0 +1,24 @@
+{
+  "on": {
+    "event": "continue",
+    "next": "/rooms/<%= @room %>/command.json"
+  }
+},
+
+{
+  "ask": {
+    "say": [
+      {
+        "value": "<%= @description %>",
+        "voice": "simon"
+      }
+    ],
+    "name": "command",
+    "choices": {
+      "value": "http://thy-dungeonman.heroku.com/commands.grxml"
+    },
+    "required": true,
+    "bargein": true,
+    "timeout": 30
+  }
+}
