@@ -1,0 +1,47 @@
+%h1#registrations_title 
+  All Users
+%table#registrations
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Phone
+      %th
+        Email
+      %th
+        Has Won?
+  %tbody
+  -@registrations.each do |each|
+    %tr
+      %td
+        =each["doc"]["user_name"]
+      %td
+        =each["doc"]["phone_number"]
+      %td
+        =each["doc"]["email"]        
+      %td
+        =has_already_won(each["doc"]["has_won"])
+
+%h1#winner_title
+%input{:id=>"pick_winner", :type => "button", :value=>"Pick Winner"}/
+#results
+  %table
+    %thead
+      %tr
+        %th
+          Name
+        %th
+          Phone
+        %th
+          Email
+    %tbody
+      %tr#the_winner
+        %td#user_name
+        %td#phone
+        %td#email
+    
+  %input{:id=>"send_notification",:type => "button", :value=>"Send Notification"}/
+ 
+#footer
+  =$config["tropo"]["app_number"]

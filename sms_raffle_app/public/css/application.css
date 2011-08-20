@@ -1,0 +1,24 @@
+body {
+  background-color: #7c7c7c;
+  background-image: url(/images/bg.jpg);
+  background-position: center -200px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  color: #222222;
+}
+
+#footer{
+  position: relative;
+  padding-left:50%;
+}
+
+#logo{
+  position: relative;
+  left: 50%;
+}
+
+#tropo_logo{
+  width:180px;
+  height:40px;
+  
+}
