@@ -1,0 +1,17 @@
+This application allows you to create presentations for a conference, and then when looking at one, use the Comment button to leave a feedback using Phono.
+Then using the Tropo hosted file it transcribes the comment, posts it back to the website so everyone can see.
+
+Future Direction
+* Better XML parsing
+* Allow replay of audio instead of just showing text
+* Provide AJAX page update of new comments
+* Provide RSS/IRC/other streaming feed of comments
+* Provide support for real phones (e.g. have to pass in the presentation id/title somehow)
+
+David Bluestein II and Steve Rogers
+ii, inc.
+512-477-4837
+Skype: dbii
+
+You can see it running at http://67.79.196.167:5000/ as long as that dev machine is up.
+

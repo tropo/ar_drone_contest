@@ -1,0 +1,5 @@
+<h1>Available Presentations</h1>
+
+<% Presentation.all.each do |p|  %>
+  <%= link_to "#{p.title} by #{p.name}", p %><br/>
+<% end %>
