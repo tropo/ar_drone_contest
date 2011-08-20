@@ -1,0 +1,62 @@
+<%= link_to 'Home', presentations_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+<h1><%= @presentation.title %></h1>
+    by <b><%= @presentation.name %></b>
+</p>
+
+<p>
+  <b>Description:</b><br/>
+  <%= @presentation.description %>
+</p>
+
+<h2>Comments</h2>
+
+<% @presentation.feedbacks.each do |f| %>
+  <%= f.comment %>
+<hr/>
+<% end %>
+
+<div id="soft_phone">
+  <input id="call" type="button" disabled="true" value="Loading..." />
+    <span id="status"></span>
+
+    <script>
+    $(document).ready(function(){
+      var phono = $.phono({
+        apiKey: "97e47fac6a781654b28941071d9936f9",
+        onReady: function() {
+          $("#call").attr("disabled", false).val("Comment");
+        }
+      });
+
+      $("#call").click(function() {
+        $("#call").attr("disabled", true).val("Busy");
+        phono.phone.dial("app:9996141694", {
+          onRing: function() {
+            $("#status").html("Ringing");
+          },
+          onAnswer: function() {
+            $("#status").html("Answered");
+          },
+          onHangup: function() {
+            $("#call").attr("disabled", false).val("Comment");
+            $("#status").html("Call concluded. Please reload the page in 30 seconds to see your feedback.");
+          },
+           headers: [
+             {
+               name:"x-presentation-id",
+               value:"<%= @presentation.id %>"
+             },
+             {
+               name:"x-presentation-name",
+               value:"<%= @presentation.title.gsub(/"/,'') %>"
+             }
+           ]
+        });
+      });
+    })
+    </script>
+    </div>
+    

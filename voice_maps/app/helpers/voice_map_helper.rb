@@ -1,0 +1,2 @@
+module VoiceMapHelper
+end
