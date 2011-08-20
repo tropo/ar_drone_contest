@@ -1,0 +1,55 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    builder (3.0.0)
+    compass (0.10.6)
+      haml (>= 3.0.4)
+    configuration (1.2.0)
+    daemons (1.1.0)
+    eventmachine (0.12.10)
+    haml (3.0.25)
+    hashie (0.4.0)
+    heroku (1.17.5)
+      json (~> 1.4.6)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
+    json (1.4.6)
+    json_pure (1.5.0)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    mime-types (1.16)
+    phone (0.9.9.3)
+    rack (1.2.1)
+    rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
+    sass (3.1.0.alpha.214)
+    shotgun (0.8)
+      rack (>= 1.0)
+    sinatra (1.1.2)
+      rack (~> 1.1)
+      tilt (~> 1.2)
+    thin (1.2.7)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
+    tilt (1.2.1)
+    tropo-webapi-ruby (0.1.9)
+      hashie (>= 0.2.0)
+      json_pure (>= 1.2.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  builder
+  compass
+  haml
+  heroku
+  phone
+  sass
+  shotgun
+  sinatra
+  thin
+  tropo-webapi-ruby

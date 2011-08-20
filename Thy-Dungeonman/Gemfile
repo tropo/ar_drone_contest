@@ -1,0 +1,17 @@
+source :gemcutter
+
+gem 'sinatra'
+gem 'haml'
+gem 'builder'
+
+gem 'tropo-webapi-ruby'
+
+gem 'phone'
+
+group :development do
+  gem 'shotgun'
+  gem 'thin'
+  gem 'compass'
+  gem 'sass'
+  gem 'heroku'
+end
