@@ -1,0 +1,25 @@
+<h1>Listing feedbacks</h1>
+
+<table>
+  <tr>
+    <th>Presentation</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @feedbacks.each do |feedback| %>
+  <tr>
+    <td><%= feedback.presentation_id %></td>
+    <td><%= feedback.comment %></td>
+    <td><%= link_to 'Show', feedback %></td>
+    <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
+    <td><%= link_to 'Destroy', feedback, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Feedback', new_feedback_path %>
