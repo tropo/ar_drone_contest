@@ -1,0 +1,29 @@
+body
+  -webkit-text-stroke: 1px transparent
+  -webkit-background-clip: padding-box
+@media only screen and (max-device-width:480px)
+  body
+    -webkit-text-stroke: 0 black
+
+=rounded($radius: 5px)
+  -moz-border-radius: $radius
+  -webkit-border-radius: $radius
+  -khtml-border-radius: $radius
+  border-radius: $radius
+
+=transition($property: "color", $duration: 0.5s)
+  -webkit-transition-property: $property
+  -webkit-transition-duration: $duration
+  
+=box-shadow($hoffset: 0, $voffset: 1px, $blur: 5px, $color: rgba(0.0, 0.0, 0.0, 0.4))
+  -moz-box-shadow: $hoffset $voffset $blur $color
+  -webkit-box-shadow: $hoffset $voffset $blur $color
+  box-shadow: $hoffset $voffset $blur $color
+
+=text-shadow($hoffset: 0, $voffset: 1px, $blur: 1px, $color: #fff)
+  text-shadow: 0px 1px 1px #fff
+  
+=small-caps($font-size: 120%)
+  font-size: $font-size
+  text-transform: lowercase
+  font-variant: small-caps
