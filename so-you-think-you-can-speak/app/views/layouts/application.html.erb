@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    .right { text-align: right; }
+    #plotter {
+      border: 1px solid #ccc;
+    }
+  </style>
+  
+  <title>So You Think You Can Speak</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js' %>  
+
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<%= yield %>
+
+<div class="result"></div>
+</body>
+<script type="text/javascript">
+
+  function plotter() {
+    var jqxhr = $.getJSON("/calls.json", function(data) {
+      x = values.length;
+      av = data.average_value;
+      // console.log(av);
+      if (av === 0) { 
+        av = 1;
+        context.strokeStyle = "rgb(150,150,150)";
+      } else if (av < 0)
+      {
+        context.strokeStyle = "rgb(255,50,50)";        
+      } else {
+        context.strokeStyle = "rgb(50,255,50)";        
+      }
+      $('b#value').html(data.value);
+      // console.log(av);
+      context.beginPath();
+      context.moveTo(x,100-av);
+      context.lineTo(x,100);
+      context.stroke();
+      context.closePath();
+      values.push(data.av);
+      
+      if (values.length > 400) {
+        context.clearRect(0,0,context.canvas.width,context.canvas.height)
+        values = [];
+      }
+      // console.log(data);
+    });
+  }
+  var canvas  = document.getElementById('plotter');
+  if (canvas.getContext){
+    var context = canvas.getContext('2d');
+  } else {
+    $('#nocanvas').html('<h2>Browser does not support plotting.</h2>')
+  }
+  
+  var values = [];
+  setInterval(plotter, 1000);
+      
+</script>
+</html>

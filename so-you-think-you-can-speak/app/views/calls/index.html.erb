@@ -1,0 +1,47 @@
+<h1>Realtime Speaker Rating</h1>
+<h3>Text to: 512 520 0556</h3>
+<span>Current Vote: </span><b id="value"><%= @total %></b>
+<br />
+<canvas id="plotter" height="200" width="400"></canvas>
+<div id="nocanvas"></div>
+
+<table>
+  <tr>
+    <th>Text</th>
+    <th>Points</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td class="right">1</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td class="right">-1</td>
+  </tr>
+  <tr>
+    <td>bad</td>
+    <td class="right">-1</td>
+  </tr>
+  <tr>
+    <td>sucks, lousy</td>
+    <td class="right">-2</td>
+  </tr>
+  <tr>
+    <td>good</td>
+    <td class="right">1</td>
+  </tr>
+  <tr>
+    <td>great, fantanstic</td>
+    <td class="right">2</td>
+  </tr>
+  <tr>
+    <td>awesome, amazing</td>
+    <td class="right">3</td>
+  </tr>
+</table>
+<p>
+  <a href="http://dl.dropbox.com/u/3358054/So-you-think-you-can-speak.rb">Tropo Code</a>  
+</p>
+<br />
+<%= link_to 'New Call', new_call_path %>
+
